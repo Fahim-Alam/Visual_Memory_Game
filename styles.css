@@ -1,0 +1,182 @@
+/** @format */
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: rgb(93, 228, 93); */
+  background-image: url("images/background-image.jpg");
+}
+
+section {
+  display: flex;
+  gap: 7px;
+}
+
+.column div {
+  padding: 10px;
+  height: 60px;
+  width: 60px;
+  border: 3px solid black;
+  border-radius: 5px;
+}
+
+.column div:hover {
+  cursor: pointer;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+button {
+  position: relative;
+  margin-top: 1.5rem;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  transition: filter 250ms;
+}
+
+button:hover {
+  cursor: pointer;
+  filter: brightness(110%);
+}
+
+button:hover .text {
+  transform: translateY(-6px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+button:active .text {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+button:hover .shadow {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+button:active .shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+}
+
+button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: hsl(0deg 0% 0% / 0.25);
+  will-change: transform;
+  transform: translateY(2px);
+  transition: transform 350ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+.edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background-color: rgb(90, 90, 90);
+}
+
+.text {
+  display: block;
+  position: relative;
+  padding: 12px 42px;
+  border-radius: 12px;
+  font-size: 1.25rem;
+  color: white;
+  background: grey;
+  will-change: transform;
+  transform: translateY(-4px);
+  transition: transform 350ms cubic-bezier(0.3, 0.7, 0.4, 1);
+  font-weight: bold;
+}
+
+h3 {
+  font-family: "Comfortaa", sans-serif;
+  font-size: 1.7rem;
+  font-weight: normal;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-family: "Comfortaa", sans-serif;
+  position: absolute;
+  top: 0;
+  margin-top: 2.25rem;
+}
+
+.game-text {
+  display: flex;
+  gap: 7rem;
+}
+
+.score-display {
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  margin-bottom: 1.75rem;
+  margin-left: 0.7rem;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
