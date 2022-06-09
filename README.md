@@ -6,3 +6,4 @@ At Every level, a number of tiles will flash green for few seconds. Memorize the
 Levels get progressively more difficult.
 
 
+Earn points by correctly selecting the right tiles. Likewise, points will be deducted if you select the wrong tiles.
